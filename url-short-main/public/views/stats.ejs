@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <div class="container">
+      <h1><a href="/">SHORTY </h1></a>
+      <p class="long"> URL <%=isLong.long%> </p>
+      <p class="stats1"> <i class="fa-solid fa-scissors"></i> This link was shortened <%=isLong.shortCount%> times </p>
+      <p class="stats2"> <i class="fa-solid fa-eye"></i> This link was accessed <%=isLong.accessCount%> times </p>
+
+      <script>
+        async function copyToClipboard() {
+          await navigator.clipboard.writeText("http://localhost:4040/<%=isLong.short%>");
+          alert("Link copied");
+        }
+      </script>
+
+<style>
+  body {
+          display:flex; 
+          justify-content: center; 
+          background-color: rgb(244, 244, 227)
+          
+      }
+  
+  h1 {
+          margin-left: 50px;
+
+  }
+  a {
+          all: unset;
+          cursor: pointer;
+          color: rgb(99, 59, 134);
+          font-size: 80px; 
+          
+          
+      }
+  
+  input {
+          width: 480px;
+          height: 30px;
+          border-radius: 10px; 
+          font-size: 15px;
+          padding: 5px;
+          padding-left: 10px;
+          color: rgb(99, 59, 134); 
+          border: none;
+      }
+  input:focus {
+          outline-color: purple; 
+          border-style: solid;
+          color:rgb(99, 59, 134); 
+      }
+  input::placeholder {
+          color: rgb(99, 59, 134); 
+      }
+      
+  button {
+          margin-top: 20px;
+          height: 50px;
+          width: 50px;
+          border-radius: 10px;
+          background-color: white; 
+          color: rgb(99, 59, 134); 
+          border-color:rgb(99, 59, 134);
+          border-style: solid;
+          cursor: pointer;
+      }
+  
+  p.short {
+          font-size: 30px;
+          border-style: solid; 
+          border-color: rgb(99, 59, 134);
+          border-radius: 15px;
+          border-width: 3px;
+          padding: 10px;
+          color: black; 
+          width: 400px;
+          background-color: rgb(250, 250, 250); 
+      }
+  p.long {
+          color: black;
+  }
+  p {
+        font-size: 17px; 
+        color:rgb(99, 59, 134);
+  }
+  #copy {
+    cursor: pointer;
+    margin-left: 20px; 
+  }
+          
+
+  </style>
+
+  </body>
+
+</html>

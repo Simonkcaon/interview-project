@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <div class= "container">
+     <h1><a href="/">SHORTY </h1></a>
+   
+     <form method = "POST">
+        <label for = "longURL" ></label>
+        <input required placeholder= "Enter the URL and select Shorten or view the Statistics" type = "url" name = "longURL" id= "longURL" >
+        <p>
+        <button type = "submit" formaction= "/urlShort" > <i class="fa-solid fa-scissors"> </i> </button>
+        <button type = "submit" formaction = "/urlStats" > <i class="fa-solid fa-chart-line"> </i> </button>
+        </p>
+    </form>
+   
+    
+</div>
+
+<style>
+body {
+        display: flex; 
+        justify-content: center; 
+        background-color: rgb(244, 244, 227)
+        
+    }
+h1 {
+        margin-left: 50px;
+    }
+a {
+        all: unset;
+        cursor: pointer;
+        color: rgb(99, 59, 134);
+        font-size: 80px; 
+        
+    }
+p {
+        margin-top: 0;
+        padding-left: 35%;
+}
+
+input {
+        width: 480px;
+        height: 30px;
+        border-radius: 10px; 
+        font-size: 15px;
+        padding: 5px;
+        padding-left: 10px;
+        color: rgb(99, 59, 134); 
+        border: none;
+    }
+input:focus {
+        outline-color: purple; 
+        border-style: solid;
+        color:rgb(99, 59, 134); 
+    }
+input::placeholder {
+        color: rgb(99, 59, 134);
+    }
+    
+button {
+        margin-top: 20px; 
+        width: 50px;
+        font-size: 25px; 
+        border-radius: 10px;
+        background-color: white; 
+        color: rgb(99, 59, 134); 
+        border-color:rgb(99, 59, 134);
+        border-style: solid; 
+        cursor: pointer;
+    }
+
+</style>
+</body>
+
+</html>
+
